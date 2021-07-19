@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Funciones</title>
+	</head>
+	<body>
+		<script>
+			/*
+			//Ejemplo de una suma sin función
+			var numero1 = 10;
+			var numero2 = 5;
+			var resultado = numero1 + numero2;
+			document.write(resultado);
+			document.write('<br>');
+			numero1 = 10;
+			numero2 = 7;
+			resultado = numero1 + numero2;
+			document.write(resultado);
+			*/
+			/*
+			//Ejemplo de una suma sin función
+			*/
+			function suma(numero1, numero2) {
+				var resultado = numero1 + numero2;
+				return resultado;
+			}
+			document.write(suma(10, 5));
+			document.write('<br>');
+			document.write('Usando función anónima:');
+			document.write('<br>');
+			var suma2 = function(numero1, numero2) {
+				return numero1 + numero2;
+			}
+			document.write('suma2: ' + suma2(1, 5));
+			//Funciones autoinvocadas
+			document.write('<br>');
+			document.write('<br>');
+			document.write('Funciones autoinvocadas: ');
+			document.write('<br>');
+			(function() {
+				alert('Hola mundo');
+			}());
+ 		</script>
+	</body>
+</html
