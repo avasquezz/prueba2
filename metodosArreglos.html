@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Métodos de arreglos</title>
+	</head>
+	<body>
+		<script>
+			var amigos = [ 'Carlos', 'Alejandro', 'César', 'Manuel', 'Luis' ]
+			document.write('Arreglo: ' + amigos);
+			document.write('<br><br>');
+//------------Método length
+			document.write('Método length:<br>');
+			document.write(amigos.length);
+			document.write('<br><br>');
+//------------Método Join
+			document.write('Método Join:<br>');
+			var cadenaTexto = amigos.join(' - ');
+			document.write(cadenaTexto);
+			document.write('<br><br>');
+//------------Método Pop y push
+			//Pop: Elimina el último elemento
+			document.write('Método Pop y push:<br>');
+			amigos.pop();
+			document.write(amigos);
+			document.write('<br>');
+			amigos.pop();
+			document.write(amigos);
+			document.write('<br>');
+			//Push: Agrega el elemento al final del arreglo
+			amigos.push('Felipe');
+			document.write(amigos);
+			document.write('<br><br>');
+//------------Método shift y unshift
+			//Shift: Elimina el primer elemento
+			document.write('Método shift y unshift:<br>');
+			amigos.shift();
+			document.write(amigos);
+			document.write('<br>');
+			//unshift: Agrega el elemento al final del arreglo
+			amigos.unshift('Oscar');
+			document.write(amigos);
+			document.write('<br><br>');
+//------------Método concat
+			document.write('Método concat:<br>');
+			var amigos2 = [ 'Rosa', 'Janeth' ];
+			var todosMisAmigos = amigos.concat(amigos2);
+			document.write(todosMisAmigos);
+			document.write('<br><br>');
+//------------Método sort y reverse
+			document.write('Método sort y reverse:<br>');
+			amigos.sort();//Solo ordena cadenas, no funciona con números
+			document.write(amigos);
+			document.write('<br>');
+			amigos.reverse();
+			document.write(amigos);
+			document.write('<br><br>');
+		</script>
+	</body>
+</html>

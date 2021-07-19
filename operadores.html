@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Operadores</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				Tipos de operadores:
+				- Asignacion
+				- Matemáticos o Aritméticos
+				- Incremento y decremento
+				- Operadores lógicos
+					- Negación
+					- AND
+					- OR
+				- Operadores:
+					== 	Igual a
+					=== Igual en valor y tipo
+					!= 	No iguales
+					!== Noiguales en valor y tipo
+					> 	Mayor que
+					< 	Menor que
+					>=	Mayor o igual que
+					<=	Menor o igual que
+			*/
+			//Se recomienda declarar todas las variables al inicio de la función
+			//- Asignacion
+			var nombre;
+			nombre = 'Juan';
+			//- Asignacion
+			//- Matemáticos o Aritméticos
+			var numero1 = 5;
+			var numero2 = 10;
+			var resultado1 = numero1 + numero2;
+			var resultado2 = numero1 - numero2;
+			var resultado3 = numero1 * numero2;
+			var resultado4 = numero1 / numero2;
+			var resultado5 = numero1 % numero2;
+			document.write('Matemáticos o Aritméticos<br>');
+			document.write('Número 1: ' + numero1 + '<br>Número 2: ' + numero2 + '<br>');
+			document.write('Suma:' + resultado1 + '<br>');
+			document.write('Resta:' + resultado2 + '<br>');
+			document.write('Multiplicación:' + resultado3 + '<br>');
+			document.write('División:' + resultado4 + '<br>');
+			document.write('Residuos:' + resultado5 + '<br>');
+			//- Matemáticos o Aritméticos
+			//- Incremento y decremento
+			document.write('<br>Incremento y decremento<br>');
+			var numero = 8;
+			var resultado = numero++;
+			document.write(resultado);
+			document.write('<br>');
+			document.write(numero);
+			document.write('<br>');
+			//- Incremento y decremento
+			//- Operadores lógicos
+			document.write('<br>Operadores lógicos (== 	Igual a)<br>');
+			numero1 = 5;
+			numero2 = 5;
+			var resultado = numero1 == numero2;//true
+			document.write('numero1: ' + numero1);
+			document.write('<br>');
+			document.write('numero2: ' + numero2);
+			document.write('<br>');
+			document.write('numero1 == numero2');
+			document.write('<br>');
+			document.write(resultado);
+			document.write('<br>');
+			numero1 = 15;
+			numero2 = 5;
+			var resultado = numero1 == numero2;//true
+			document.write('numero1: ' + numero1);
+			document.write('<br>');
+			document.write('numero2: ' + numero2);
+			document.write('<br>');
+			document.write('numero1 == numero2');
+			document.write('<br>');
+			document.write(resultado);
+			document.write('<br>');
+
+			document.write('<br>Operadores lógicos (=== Igual en valor y tipo)<br>');
+			numero1 = 5;
+			numero2 = '3';
+			var resultado = numero1 === numero2;//true
+			document.write('numero1: ' + numero1);
+			document.write('<br>');
+			document.write('numero2: ' + numero2);
+			document.write('<br>');
+			document.write('numero1 == numero2');
+			document.write('<br>');
+			document.write(resultado);
+			document.write('<br>');
+			//- Operadores lógicos
+		</script>
+	</body>
+</html>
