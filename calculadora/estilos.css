@@ -1,0 +1,49 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: #21295c;
+	color: #cf5c36;
+}
+
+.contenedor {
+	width: 300px;
+	background: #eee5e9;
+	padding: 20px;
+	margin: 20px auto;
+}
+
+form {
+	width: 100%;
+}
+
+form p {
+	text-align: center;
+	margin-bottom: 20px;
+	padding: 20px;
+	font-size: 30px;
+}
+
+form input[type="text"] {
+	text-align: center;
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+form .btn {
+	padding: 20px;
+	width: 100%;
+	background: #cf5c36;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	text-align: center;
+	display: inline-block;
+	border: none;
+	text-decoration: none;
+}

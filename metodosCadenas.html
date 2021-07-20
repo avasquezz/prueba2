@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+		<title>Métodos de cadenas</title>
+	</head>
+	<body>
+		<script>
+			var nombre = 'Juan Pérez';
+			var numeroCaracteres = nombre.length;
+			console.log(nombre + ' tiene '+ numeroCaracteres + ' caracteres (length)');
+			var segundoNombre = nombre.substring(5, 10);
+			console.log('Segundo nombre (substring): ' + segundoNombre);
+			segundoNombre = nombre.substr(5, 5);
+			console.log('Segundo nombre (substr): ' + segundoNombre);
+			var nuevoNombre = nombre.replace('Pérez', 'Castillo');
+			console.log('Nuevo nombre (replace): ' + nuevoNombre);
+			console.log('Nombre (toUpperCase): ' + nombre.toUpperCase());
+			console.log('Nombre (toLowerCase): ' + nombre.toLowerCase());
+			var posicion = nombre.indexOf('a');
+			console.log('Nombre (indexOf): ' + posicion);
+			posicion = nombre.lastIndexOf('e');
+			console.log('Nombre (lastIndexOf): ' + posicion);
+		</script>
+	</body>
+</html>

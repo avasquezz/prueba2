@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Scope de Javascript</title>
+	</head>
+	<body>
+		<script>
+			//Las variables pueden ser locales y globales
+			//Variables locales
+			/*function saludo() { 
+				var texto = "Hola mundo";
+				console.log(texto);
+			}
+			saludo();
+			//Variables locales con funciones anidadas
+			function saludo2() { 
+				var texto = 'Hola mundo 2'
+				function mensaje() {
+					var texto2 = 'Modificado'
+					console.log(texto);
+					console.log(texto2);
+				}
+				mensaje();
+			}
+			saludo2();*/
+
+			//Variables Globales
+			/*var texto = 'Hola mundo';
+			function saludo() {
+				console.log(texto);
+				texto = 'Hola mundo modificado';
+				console.log(texto);
+			}
+			console.log(texto);
+			saludo();*/
+// --------------- IMPORTANTE
+			// Si una variable se declara sin la palabra 'var' dentro de una función, entonces javascript lo considera como variable global
+			/*function saludo() {
+				mensaje = 'Hola mundo';
+			}
+			saludo();
+			console.log(mensaje);*/
+			// Proteger variables de tercero - USAR FUNCIONES AUTOINVOCADAS
+			(function() { 
+				
+				var mensaje = 'Hola mundo densde una función autoinvocada';
+				alert(mensaje);
+			}());
+		</script>
+	</body>
+</html>
