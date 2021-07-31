@@ -4,8 +4,29 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 		<title>Eventos</title>
+		<style>
+			.caja {
+				width: 200px;
+				height: 200px;
+				cursor: pointer;
+				background: #226fc1;
+				margin: 10px;
+				display: inline-block;
+				text-align: center;
+				font-size: 30px;
+				color: #fff;
+				font-family: Arial;
+			}
+		</style>
 	</head>
 	<body>
+		<!-- Modelo básico de eventos (Solo es recomendable para una prueba rápida) -->
+		<!--<button onclick="saludo()">Saludo</button>-->
+		<!-- Modelo de eventos estándar (lo mas usado en la actualidad) -->
+		<!--<button id="btn-saludar">Saludo</button>-->
+		<button id="btn-caja">Crear caja</button>
+		<section id="contenedor"></section>
+		<p>Mozzilla develop Events - Para eventos</p>
 		<script>
 			/*
 				Existen 3 modelos de eventos diferentes:
@@ -21,6 +42,44 @@
 
 					- Modelo de eventos de Internet Explores
 						Modelo creado por Microsoft exclusivamente para IE
+			*/
+			function crearCaja() {
+				var contenedor = document.getElementById('contenedor');
+				var caja = document.createElement('div');//Crear objeto div
+				caja.className = 'caja';//Agregar clase caja al div creado
+				contenedor.appendChild(caja);//Agregar la caja creada al contenedor
+			}
+			var btnCaja = document.getElementById('btn-caja');
+			btnCaja.addEventListener('click', crearCaja);
+			
+			/*function saludo() {
+				alert('Hola');
+			}
+			function saludo2() {
+				alert('Hola 2s');
+			}
+			//Mozilla developer event
+			var btnSaludar = document.getElementById('btn-saludar');
+			btnSaludar.addEventListener('click', saludo);
+			btnSaludar.addEventListener('click', saludo2);
+			//Función anónima o fallback
+			btnSaludar.addEventListener('click', function() {
+				//código
+			});
+			btnSaludar.addEventListener('mouseenter', saludo2);
+			btnSaludar.removeEventListener('click', saludo2);
+			*/
+			/*
+				Algunos de los elementos mas usados:
+					click
+					focus
+					blur
+					change
+					onload
+					mouseover
+					mouseout
+					resize
+					submit
 			*/
 		</script>
 	</body>

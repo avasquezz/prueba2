@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>Palabra reservada This</title>
+		<style>
+			.caja {
+				width: 200px;
+				height: 200px;
+				cursor: pointer;
+				background: #226fc1;
+				margin: 10px;
+				display: inline-block;
+				text-align: center;
+				font-size: 30px;
+				color: #fff;
+				font-family: Arial;
+			}
+			.negro {
+				background: #000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="caja">1</div>
+		<div class="caja">2</div>
+		<div class="caja">3</div>
+		<div class="caja">4</div>
+		<script>
+			function color() {
+				//Classlist alterna la clase, es decir si el elemento no contiene dicha clase entonces la agrega, en caso contrario la quita
+				//cajas[0].classList.toggle('negro');
+				this.classList.toggle('negro');
+			}
+			var cajas = document.getElementsByClassName('caja');
+			//cajas[0].addEventListener('click', color);
+
+			//Se le agrega un event listener al click
+			for (var i = 0; i < cajas.length; i++) {
+				cajas[i].addEventListener('click', color);
+			}
+		</script>
+	</body>
+</html>

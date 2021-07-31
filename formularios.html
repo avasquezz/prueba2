@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Formularios</title>
+	</head>
+	<body>
+		<form action="" name="formulario" id="formulario">
+			<input type="text" name="nombre" placeholder="nombre">
+			
+			<input type="radio" name="sexo" id="hombre">
+			<label for="hombre">Hombre</label>
+			
+			<input type="radio" name="sexo" id="mujer">
+			<label for="mujer">Mujer</label>
+
+			<input type="checkbox" name="terminos" id="terminos">
+			<label for="terminos">Terminos</label>
+
+			<input type="submit" value="Enviar">
+
+		</form>
+
+		<script>
+			//Ingresa al formulario y acceder a cada elemento como si fuera un arreglo (No recomendada)
+			//var formulario = document.getElementsByName('formulario')[0];
+			var formulario = document.getElementById('formulario');
+			//Se accede a través de la etiqueta name -- IMPORTANTE
+			var nombre = formulario.nombre;
+			var sexo = formulario.sexo;
+			var terminos = formulario.terminos;
+			formulario.addEventListener('submit', validar);
+			function validar(e) {
+				//Validación de nombre
+				if (nombre.value > 18) {
+					alert('Máximo de caracteres permitidos');
+				} else if (nombre.value == 0) {
+					alert('Favor de ingresar un nombre');
+				}
+				//validación de sexo
+				if (!sexo[0].checked && !sexo[1].checked) {
+					alert('Favor ingresa un sexo');
+				}
+				//validación de términos y condiciones
+				if (!terminos.checked) {
+					alert('Acepta los términos y condiciones');
+				}
+				//Previene que se ejecute la función actual
+				//Evita que se envíe el formulario
+				e.preventDefault();
+			}
+		</script>
+	</body>
+</html>
